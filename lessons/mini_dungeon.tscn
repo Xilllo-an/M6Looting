@@ -324,10 +324,10 @@ color = Color(0.977546, 0.842183, 0.960847, 1)
 metadata/_edit_lock_ = true
 
 [node name="chect" parent="." instance=ExtResource("7_jj8kc")]
-position = Vector2(460, 251)
+position = Vector2(455, 252)
 
 [node name="chect2" parent="." instance=ExtResource("7_jj8kc")]
-position = Vector2(639, 362)
+position = Vector2(640, 416)
 
 [node name="chect3" parent="." instance=ExtResource("7_jj8kc")]
-position = Vector2(767, 249)
+position = Vector2(729, 252)
