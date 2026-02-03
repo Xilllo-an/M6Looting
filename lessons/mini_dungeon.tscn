@@ -330,4 +330,5 @@ position = Vector2(455, 252)
 position = Vector2(640, 416)
 
 [node name="chect3" parent="." instance=ExtResource("7_jj8kc")]
+top_level = true
 position = Vector2(729, 252)
