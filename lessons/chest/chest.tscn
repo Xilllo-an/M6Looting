@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://cs4k15ny4kqt0"]
 
 [ext_resource type="Texture2D" uid="uid://c3hwsm5ugp8qw" path="res://lessons/chest/bottom.png" id="1_33tf0"]
-[ext_resource type="Script" uid="uid://fyhn6v56pgio" path="res://lessons/chest/chect.gd" id="1_68ree"]
+[ext_resource type="Script" uid="uid://fyhn6v56pgio" path="res://lessons/chest/chest.gd" id="1_68ree"]
 [ext_resource type="Shader" uid="uid://lio2wmbue2of" path="res://lessons/chest/group_outline.gdshader" id="1_ebkp3"]
 [ext_resource type="Texture2D" uid="uid://bnem1cahhoxdk" path="res://lessons/chest/top.png" id="2_ebkp3"]
 [ext_resource type="PackedScene" uid="uid://0i1g0cunmseb" path="res://lessons/items/apple.tscn" id="2_sdwtw"]
@@ -55,12 +55,11 @@ _data = {
 &"open": SubResource("Animation_68ree")
 }
 
-[node name="chect" type="Area2D"]
+[node name="Chest" type="Area2D"]
 script = ExtResource("1_68ree")
 possible_items = Array[PackedScene]([ExtResource("2_sdwtw"), ExtResource("3_i8681"), ExtResource("4_dsxeo")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_1jp70")
 

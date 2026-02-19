@@ -44,9 +44,8 @@ func open() -> void:
 	if possible_items.is_empty():
 		return
 
-	for current_index in range(randi_range(1, 7)):
+	for current_index in range(randi_range(1, 3)):
 		_spawn_random_item()
-
 
 func _spawn_random_item() -> void:
 	var loot_item: Area2D = possible_items.pick_random().instantiate()

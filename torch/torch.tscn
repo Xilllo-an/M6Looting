@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://dogvkmxwjaa10"]
+
+[ext_resource type="Shader" uid="uid://du15n57erwxu4" path="res://torch/flame_shape.gdshader" id="1_pa17o"]
+
+[sub_resource type="Gradient" id="Gradient_8r0r1"]
+offsets = PackedFloat32Array(0.0869565, 0.666667)
+colors = PackedColorArray(1, 0.4, 0, 1, 1, 0.716667, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_cnwig"]
+gradient = SubResource("Gradient_8r0r1")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ht4je"]
+noise_type = 2
+fractal_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_1dd3t"]
+noise = SubResource("FastNoiseLite_ht4je")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s1444"]
+resource_local_to_scene = true
+shader = ExtResource("1_pa17o")
+shader_parameter/noise_sampler = SubResource("NoiseTexture2D_1dd3t")
+shader_parameter/flame_gradient = SubResource("GradientTexture1D_cnwig")
+shader_parameter/time_scale = 1.0
+shader_parameter/offset = Vector2(0, 0)
+
+[node name="Torch"]
+
+[node name="Flame" parent="." index="1"]
+material = SubResource("ShaderMaterial_s1444")
